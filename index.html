@@ -138,12 +138,36 @@
         width:800px;
     }
 
+    .navbar-item
+    {
+        padding:8px 16px;
+        float:left;
+        width:auto;
+        border:none;
+        display:block;
+        outline:0;
+        text-decoration: none;
+        color: #fff;
+    }
+
 </style>
 </head>
 <html>
 <body>
 
-    <div class="parallax-img-1" style="display:relative">
+    <!--Navbar-->
+    <div style="position:fixed;width:100%;z-index:1; top:0; background-color: rgba(0, 0, 0);">
+        <div style="width:100%;overflow:hidden;display:inline-block;width:100%" id="navbar">
+            <a href="#home" class="navbar-item">HOME</a>
+            <a href="#zombonk" class="navbar-item">ZOMBONK</a>
+            <a href="#quickswapcaverns" class="navbar-item">QUICK SWAP CAVERNS</a>
+            <a href="#redactedcatacombs" class="navbar-item">THE [REDACTED] CATACOMBS</a>
+
+            <a href="files/Christopher Martens Resume.pdf" target="_blank" class="navbar-item" style="float:right!important">DOWNLOAD MY RESUME</a>
+        </div>
+    </div>
+
+    <div class="parallax-img-1" style="display:relative" id="home">
         <div class="display_center" style="white-space:nowrap">
             <span class="black-textbox textbox-padded" style="display:inline-block;width:auto;font-size:48px">CHRISTOPHER MARTENS</span>
         </div>
@@ -154,7 +178,7 @@
         <p class="center">I'm hosted with GitHub Pages. Test. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="parallax-img-2" style="display:relative">
+    <div class="parallax-img-2" style="display:relative" id="zombonk">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">ZOMBONK</span>
         </div>
@@ -208,7 +232,7 @@
         </div>
     </div>
 
-    <div class="parallax-img-3" style="display:relative">
+    <div class="parallax-img-3" style="display:relative" id="quickswapcaverns">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">QUICK SWAP CAVERNS</span>
         </div>
@@ -260,7 +284,7 @@
         </div>
     </div>
 
-    <div class="parallax-img-4" style="display:relative">
+    <div class="parallax-img-4" style="display:relative" id="redactedcatacombs">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">THE [REDACTED] CATACOMBS</span>
         </div>
