@@ -51,7 +51,7 @@
 
     .parallax-img-2
     {
-        background-image: url(images/test_image_2.png);
+        background-image: url(images/ZomBonk/Header.png);
         min-height: 400px;
     }
 
@@ -144,36 +144,54 @@
 
     <div class="parallax-img-2" style="display:relative">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
-            <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">GAME NAME 1</span>
+            <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">ZOMBONK</span>
         </div>
     </div>
 
     <div class="body-container">
-        <h1 class="center">ABOUT ME</h1>
-        <p class="center">I'm hosted with GitHub Pages. Test. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!--<h1 class="center">ABOUT ME</h1>-->
+        <p class="center">ZomBonk is a survival horror game created in 72 hours for the Ludum Dare 50 game jam, where the theme was "Delay the Inevitable". In ZomBonk, players have a flashlight which runs out of power over time, diminishing their visibility. They can restore power to the flashlight by picking up batteries which are placed randomly throughout the map. The player also has a hammer, which they can use to kill zombies as the zombies rise out of graves or to stun fully spawned zombies. If the player kills a spawning zombie, they will receive a battery, allowing them to theoretically survive infinitely. The player can take a few hits from the zombies before dying, and their health will gradually regenerate over time.</p>
         <div class="row">
-            <div class="text-column">This is the first column of text, providing some useful and insightful information. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            <div class="text-column">This is the second column of text, providing equally insightful and useful, but different, information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="text-column">
+                <div style="height: 48px"></div>
+                <ul>
+                    <li>Game Engine: Godot</li>
+                    <li>Year: 2022</li>
+                    <li>Team Size: 4</li>
+                    <li>Created For: Ludum Dare 50</li>
+                    <li><a href="https://hadmatter00.itch.io/zombonk">Download Here</a></li>
+                    <li><a href="https://github.com/KingofSkulls/zombonk">See the Github Here</a></li>
+                </ul>
+            </div>
+            <div class="text-column">
+                <p>My contributions:</p>
+                <ul>
+                    <li>Implemented a spawning system for enemies</li>
+                    <li>Implemented pickups to restore player battery charge</li>
+                    <li>Implemented UI elements to display player resources</li>
+                    <li>Composed music for the title screen</li>
+                </ul>
+            </div>
         </div>
 
         <div class="row">
             <div class="img-column">
-                <img src="images/test_image_2.png" class="fullwidth-image" onclick="onClick(this)" alt="Game screenshot">
-                <p class="center">Gameplay</p>
+                <img src="images/ZomBonk/zombie_spawning.png" class="fullwidth-image" onclick="onClick(this)" alt="Zombie spawning from a gravestone">
+                <p class="center">Zombie spawning from a gravestone</p>
             </div>
             <div class="img-column">
-                <img src="images/test_image.png" class="fullwidth-image" onclick="onClick(this)" alt="Game screenshot">
-                <p class="center">Menus</p>
+                <img src="images/ZomBonk/battery.png" class="fullwidth-image" onclick="onClick(this)" alt="Battery pickup">
+                <p class="center">Battery pickup</p>
             </div>
         </div>
         <div class="row">
             <div class="img-column">
-                <img src="images/test_image.png" class="fullwidth-image" onclick="onClick(this)" alt="Game screenshot">
-                <p class="center">Item selection</p>
+                <img src="images/ZomBonk/title_screen.png" class="fullwidth-image" onclick="onClick(this)" alt="Title screen">
+                <p class="center">Title screen</p>
             </div>
             <div class="img-column">
-                <img src="images/test_image_2.png" class="fullwidth-image" onclick="onClick(this)" alt="Game screenshot">
-                <p class="center">Other game screenshot</p>
+                <img src="images/ZomBonk/score_screen.png" class="fullwidth-image" onclick="onClick(this)" alt="Score screen">
+                <p class="center">Score screen</p>
             </div>
         </div>
     </div>
