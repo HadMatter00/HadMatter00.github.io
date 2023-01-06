@@ -35,7 +35,7 @@
         position:absolute;
     }
 
-    .parallax-img-1,.parallax-img-2
+    .parallax-img-1,.parallax-img-2,.parallax-img-3,.parallax-img-4
     {
         background-attachment: fixed;
         background-position: center;
@@ -52,6 +52,18 @@
     .parallax-img-2
     {
         background-image: url(images/ZomBonk/header.png);
+        min-height: 400px;
+    }
+
+    .parallax-img-3
+    {
+        background-image: url(images/QuickSwapCaverns/header.png);
+        min-height: 400px;
+    }
+
+    .parallax-img-4
+    {
+        background-image: url(images/test_image.png);
         min-height: 400px;
     }
 
@@ -196,6 +208,107 @@
         </div>
     </div>
 
+    <div class="parallax-img-3" style="display:relative">
+        <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
+            <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">QUICK SWAP CAVERNS</span>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <!--<h1 class="center">ABOUT ME</h1>-->
+        <p class="center">Quick Swap Caverns is a hack and slash game made for the Global Game Jam 2021, which had the theme "Lost & Found." Every time an enemy is killed, the player loses their weapon and gets a new one, which is dependent on the enemy killed. Players progress through 5 unique levels, each introducing new enemies and greater challenge than the last.</p>
+        <div class="row">
+            <div class="text-column">
+                <div style="height: 48px"></div>
+                <ul>
+                    <li>Game Engine: Godot</li>
+                    <li>Year: 2021</li>
+                    <li>Team Size: 8</li>
+                    <li>Created For: Global Game Jam 2021</li>
+                    <li><a href="https://globalgamejam.org/2021/games/quick-swap-cavern-8">Download Here</a></li>
+                </ul>
+            </div>
+            <div class="text-column">
+                <p>My contributions:</p>
+                <ul>
+                    <li>Designed levels</li>
+                    <li>Scripted a variety of unique weapons</li>
+                    <li>Implemented art and </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="img-column">
+                <img src="images/QuickSwapCaverns/level_exit.png" class="fullwidth-image" onclick="onClick(this)" alt="Level exit and a bear">
+                <p class="center">Level exit and a bear</p>
+            </div>
+            <div class="img-column">
+                <img src="images/QuickSwapCaverns/lizard_enemy.png" class="fullwidth-image" onclick="onClick(this)" alt="Lizard enemy">
+                <p class="center">Lizard enemy</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-column">
+                <img src="images/QuickSwapCaverns/turtle_shield.png" class="fullwidth-image" onclick="onClick(this)" alt="Turtle shield weapon">
+                <p class="center">Turtle shield weapon</p>
+            </div>
+            <div class="img-column">
+                <img src="images/QuickSwapCaverns/final_level.png" class="fullwidth-image" onclick="onClick(this)" alt="Final level">
+                <p class="center">Final level</p>   
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-img-4" style="display:relative">
+        <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
+            <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">THE [REDACTED] CATACOMBS</span>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <!--<h1 class="center">ABOUT ME</h1>-->
+        <p class="center">Game description</p>
+        <div class="row">
+            <div class="text-column">
+                <div style="height: 48px"></div>
+                <ul>
+                    <li>Game Engine: Godot</li>
+                    <li>Year: 2022</li>
+                    <li>Team Size: 4</li>
+                    <li>Created For: Ludum Dare 50</li>
+                    <li><a href="https://hadmatter00.itch.io/zombonk">Download Here</a></li>
+                </ul>
+            </div>
+            <div class="text-column">
+                <p>My contributions:</p>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="img-column">
+                <img src="images/ZomBonk/zombie_spawning.png" class="fullwidth-image" onclick="onClick(this)" alt="Zombie spawning from a gravestone">
+                <p class="center">Zombie spawning from a gravestone</p>
+            </div>
+            <div class="img-column">
+                <img src="images/ZomBonk/battery.png" class="fullwidth-image" onclick="onClick(this)" alt="Battery pickup">
+                <p class="center">Battery pickup</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-column">
+                <img src="images/ZomBonk/title_screen.png" class="fullwidth-image" onclick="onClick(this)" alt="Title screen">
+                <p class="center">Title screen</p>
+            </div>
+            <div class="img-column">
+                <img src="images/ZomBonk/score_screen.png" class="fullwidth-image" onclick="onClick(this)" alt="Score screen">
+                <p class="center">Score screen</p>
+            </div>
+        </div>
+    </div>
 
     <div id="modal01" class="modal" onclick="this.style.display='none'">
         <!--<span class="" title="Close Modal Image"><i class="fa fa-remove"></i></span>-->
