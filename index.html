@@ -51,7 +51,8 @@
         .parallax-img-1,
         .parallax-img-2,
         .parallax-img-3,
-        .parallax-img-4 {
+        .parallax-img-4,
+        .parallax-img-5 {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -75,6 +76,11 @@
 
         .parallax-img-4 {
             background-image: url(images/RedactedCatacombs/header.png);
+            min-height: 400px;
+        }
+
+        .parallax-img-5 {
+            background-image: url(images/RootRampage/header.png);
             min-height: 400px;
         }
 
@@ -180,6 +186,7 @@
     <div style="position:fixed;width:100%;z-index:1; top:0; background-color: #1a0000;">
         <div style="width:100%;overflow:hidden;display:inline-block;width:100%" id="navbar">
             <a href="#home" class="navbar-item">HOME</a>
+            <a href="#rootrampage" class="navbar-item">ROOT RAMPAGE</a>
             <a href="#zombonk" class="navbar-item">ZOMBONK</a>
             <a href="#quickswapcaverns" class="navbar-item">QUICK SWAP CAVERNS</a>
             <a href="#redactedcatacombs" class="navbar-item">THE [REDACTED] CATACOMBS</a>
@@ -205,6 +212,76 @@
                     math tutor at Shawnee State University's Dayton duMeleau Math Center. I expect to graduate in May of
                     2024, and am looking for an internship for the summer of 2023. Below you can find some projects I've
                     worked on, and you can download a copy of my resume from the upper right corner of the page.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-img-5" style="display:relative" id="zombonk">
+        <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
+            <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">ROOT
+                RAMPAGE</span>
+        </div>
+    </div>
+
+    <div class="body-border">
+        <div class="body-inner-border">
+            <div class="body-container">
+                <!--<h1 class="center">ABOUT ME</h1>-->
+                <p class="center">
+                    Root Rampage is a twin-stick, top-down, bullet hell shooter which was originally created for the
+                    Global Game Jam 2023. After the game jam, the team expanded upon and polished the game, presenting
+                    the more finalized version of the game at Shawnee Game Conference. In Root Rampage, players progress
+                    through 16 unique levels with increasing difficulty. There are three unique enemies, each with
+                    different attacks and movement patterns, as well as a harder variant of each. There are two
+                    challenging bosses, each which has unique attack patterns from the other enemies. Players have
+                    limited health, and can pick up health pickups to restore it. Levels are short but challenging,
+                    encouraging players to experiment with different strategies.
+                </p>
+                <div class="row">
+                    <div class="text-column">
+                        <div style="height: 48px"></div>
+                        <ul>
+                            <li>Game Engine: Godot</li>
+                            <li>Year: 2023</li>
+                            <li>Team Size: 3</li>
+                            <li>Created For: Global Game Jam 2023</li>
+                            <li><a href="https://hadmatter00.itch.io/root-rampage">Download Here</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-column">
+                        <p>My contributions:</p>
+                        <ul>
+                            <li>Developed enemy AI, making each enemy distinct</li>
+                            <li>Developed an easily expandable attack system for enemies</li>
+                            <li>Created a UI theme to unify design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/RootRampage/title_screen.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Title screen">
+                        <p class="center">Title screen</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/RootRampage/early_level.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Early game enemies">
+                        <p class="center">Early game enemies</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/RootRampage/carrot_boss.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="A boss">
+                        <p class="center">A boss</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/RootRampage/late_level.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Late game enemies">
+                        <p class="center">Late game enemies</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
