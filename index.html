@@ -183,12 +183,14 @@
 
         .image-header {
             min-height: 250px;
-            width: 90%;
+            width: 95%;
             background-position: center;
             background-size: cover;
             margin-left: auto;
             margin-right: auto;
             padding: 0.01em 16px;
+            cursor: pointer;
+            position:relative;
         }
 
         .image-overlay-box {
@@ -197,7 +199,7 @@
             display:block; 
             margin-top: 40px; 
             margin-bottom: 40px;
-            width: 90%;
+            width: 95%;
         }
 
         .flex-center-contents {
@@ -226,6 +228,27 @@
         .image-overlay-color {
             background-color:rgba(0, 0, 0, 0.7);
         }
+
+        /*From https://www.w3schools.com/howto/howto_css_shapes.asp*/
+        .triangle-down {
+            width: 0;
+            height: 0;
+            border-left: 21px solid transparent;
+            border-right: 21px solid transparent;
+            border-top: 42px solid rgba(0, 0, 0, 1);
+
+            position: absolute;
+        }
+
+        .triangle-down-outline {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 50px solid #0077b6;
+
+            position: absolute;
+        }
     </style>
 </head>
 <html>
@@ -236,10 +259,10 @@
     <div style="position:fixed;width:100%;z-index:1; top:0; background-color: #000000;">
         <div style="width:100%;overflow:hidden;display:inline-block;width:100%" id="navbar">
             <a href="#home" class="navbar-item">HOME</a>
-            <a href="#rootrampage" class="navbar-item">ROOT RAMPAGE</a>
-            <a href="#zombonk" class="navbar-item">ZOMBONK</a>
-            <a href="#quickswapcaverns" class="navbar-item">QUICK SWAP CAVERNS</a>
-            <a href="#redactedcatacombs" class="navbar-item">THE [REDACTED] CATACOMBS</a>
+            <a href="#rootrampage" class="navbar-item" onclick="enableVisible(document.getElementById('root-rampage-body'))">ROOT RAMPAGE</a>
+            <a href="#zombonk" class="navbar-item" onclick="enableVisible(document.getElementById('zombonk-body'))">ZOMBONK</a>
+            <a href="#quickswapcaverns" class="navbar-item" onclick="enableVisible(document.getElementById('quick-swap-caverns-body'))">QUICK SWAP CAVERNS</a>
+            <a href="#redactedcatacombs" class="navbar-item" onclick="enableVisible(document.getElementById('redacted-catacombs-body'))">THE [REDACTED] CATACOMBS</a>
 
             <a href="files/Christopher Martens Resume.pdf" target="_blank" class="navbar-item"
                 style="float:right!important">DOWNLOAD MY RESUME</a>
@@ -300,8 +323,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
-            <div class="body-container" id="root-rampage-body" style="display: none;">
+            <div class="body-container dropdown" id="root-rampage-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">
                     Root Rampage is a twin-stick, top-down, bullet hell shooter which was originally created for the
@@ -389,9 +414,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
 
-            <div class="body-container" id="zombonk-body" style="display: none;">
+            <div class="body-container dropdown" id="zombonk-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">ZomBonk is a survival horror game created in 72 hours for the Ludum Dare 50 game jam,
                     where the theme was "Delay the Inevitable". In ZomBonk, players have a flashlight which runs out of
@@ -476,8 +503,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
-            <div class="body-container" id="quick-swap-caverns-body" style="display: none;">
+            <div class="body-container dropdown" id="quick-swap-caverns-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">Quick Swap Caverns is a hack and slash game made for the Global Game Jam 2021, which
                     had the theme "Lost & Found." Every time an enemy is killed, the player loses their weapon and gets
@@ -537,7 +566,7 @@
     </div> -->
 
     <!-- Beginning of The Redacted Catacombs -->
-    <div class="body-border">
+    <div class="body-border" id="redactedcatacombs">
         <div class="body-inner-border">
             <div class="image-header" style="background-image: url(images/RedactedCatacombs/header.png);" onclick="toggleVisible(document.getElementById('redacted-catacombs-body'))">
                 <div class="row">
@@ -560,8 +589,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
-            <div class="body-container" id="redacted-catacombs-body" style="display:none;">
+            <div class="body-container dropdown" id="redacted-catacombs-body" style="display:none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">The [REDACTED] Catacombs is a momentum-based first-person shooter game created for a
                     class project in 2022. In The [REDACTED] Catacombs, the player progresses through a tutorial and
@@ -648,10 +679,22 @@
         function toggleVisible(x) {
             // var x = document.getElementById("myDIV");
             if (x.style.display === "none") {
+                // var elements = document.getElementsByClassName("dropdown");
+
+                // for (let i = 0; i < elements.length; i++)
+                // {
+                //     elements[i].style.display = "none";
+                // }
+
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
             }
+        }
+
+        function enableVisible(x)
+        {
+            x.style.display = "block";
         }
     </script>
 </body>
