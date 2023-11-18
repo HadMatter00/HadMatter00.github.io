@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
     <style>
         /* if more pages are added, move some/all of this to a master css */
-        /* Much of this is based on W3 School's parallax template, found at: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=h */
+        /* Much of this is based on W3 School's HTML / CSS / JS guides and templates
+        One of the primary sources I have used is this template https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=h */
 
         @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
@@ -17,8 +18,8 @@
             margin: 0;
             /* Remove body margins */
             font-size: 20px !important;
-            color: #1a0000;
-            background-color: #f5edce;
+            color: #000000;
+            background-color: #ffffff;
         }
 
         h1 {
@@ -33,11 +34,11 @@
         h5,
         h6 {
             font-family: 'Mulish', sans-serif;
-            color: #1a0000;
+            color: #000000;
         }
 
         a {
-            color: #89c4e1;
+            color: #0077b6;
         }
 
         div.display_center {
@@ -59,7 +60,7 @@
             background-size: cover;
         }
 
-        .parallax-img-1 {
+        /* .parallax-img-1 {
             background-image: url(images/header.png);
             min-height: 100vh;
         }
@@ -82,15 +83,15 @@
         .parallax-img-5 {
             background-image: url(images/RootRampage/header.png);
             min-height: 400px;
-        }
+        } */
 
         .center {
             text-align: center !important;
         }
 
         .black-textbox {
-            color: #f5edce;
-            background-color: #1a0000;
+            color: #ffffff;
+            background-color: #000000;
         }
 
         .textbox-padded {
@@ -114,22 +115,22 @@
         }
 
         .body-border {
-            background-color: #58287f;
+            background-color: #03045e;
         }
 
         .body-inner-border {
-            background-color: #89c4e1;
-            max-width: 1050px;
+            background-color: #0077b6;
+            max-width: 90%;
             margin-left: auto;
             margin-right: auto;
         }
 
         .body-container {
-            background-color: #f5edce;
+            background-color: #ffffff;
             margin-left: auto;
             margin-right: auto;
             padding: 0.01em 16px;
-            max-width: 960px
+            width: 90%;
         }
 
         .fullwidth-image {
@@ -137,7 +138,7 @@
         }
 
         .fullwidth-image:hover {
-            outline-color: #58287f;
+            outline-color: #03045e;
             outline-width: 5px;
             outline-style: solid;
         }
@@ -158,7 +159,7 @@
 
         .modal-content {
             margin: auto;
-            background-color: #f5edce;
+            background-color: #ffffff;
             position: relative;
             padding: 0;
             outline: 0;
@@ -173,8 +174,52 @@
             display: block;
             outline: 0;
             text-decoration: none;
-            color: #f5edce;
+            color: #ffffff;
             font-weight: bold;
+        }
+
+        .image-header {
+            min-height: 250px;
+            width: 90%;
+            background-position: center;
+            background-size: cover;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.01em 16px;
+        }
+
+        .image-overlay-box {
+            background-color:rgba(0, 0, 0, 0.7); 
+            padding: 0.01em 16px; 
+            display:block; 
+            margin-top: 40px; 
+            margin-bottom: 40px;
+            width: 90%;
+        }
+
+        .flex-center-contents {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .image-overlay-text {
+            color:#ffffff;
+        }
+
+        .header-overlay-text {
+            margin: 16px;
+        }
+
+        .header-overlay-column {
+            white-space:nowrap; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .image-overlay-color {
+            background-color:rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -183,7 +228,7 @@
 <body>
 
     <!--Navbar-->
-    <div style="position:fixed;width:100%;z-index:1; top:0; background-color: #1a0000;">
+    <div style="position:fixed;width:100%;z-index:1; top:0; background-color: #000000;">
         <div style="width:100%;overflow:hidden;display:inline-block;width:100%" id="navbar">
             <a href="#home" class="navbar-item">HOME</a>
             <a href="#rootrampage" class="navbar-item">ROOT RAMPAGE</a>
@@ -196,36 +241,62 @@
         </div>
     </div>
 
-    <div class="parallax-img-1" style="display:relative" id="home">
+    <!-- <div class="parallax-img-1" style="display:relative" id="home">
         <div class="display_center" style="white-space:nowrap">
             <span class="black-textbox textbox-padded"
                 style="display:inline-block;width:auto;font-size:48px">CHRISTOPHER MARTENS</span>
         </div>
-    </div>
+    </div> -->
 
-    <div class="body-border">
+    <div class="body-border" id="home">
         <div class="body-inner-border">
             <div class="body-container">
-                <h1 class="center">ABOUT ME</h1>
+                <br>
+                <h1 class="center">CHRISTOPHER MARTENS</h1>
+                <!-- <h1 class="center">ABOUT ME</h1> -->
                 <p class="center">Hi! I'm Christopher Martens, a Digital Simulation and Gaming Engineering Technology
                     major at Shawnee State University. I am additionally pursuing a math minor. I currently work as a
                     math tutor at Shawnee State University's Dayton duMeleau Math Center. I expect to graduate in May of
-                    2024, and am looking for an internship for the summer of 2023. Below you can find some projects I've
-                    worked on, and you can download a copy of my resume from the upper right corner of the page.</p>
+                    2024, and I am looking for a job. Below you can find some projects I've worked on, and you can 
+                    download a copy of my resume from the upper right corner of the page.</p>
             </div>
         </div>
     </div>
 
-    <div class="parallax-img-5" style="display:relative" id="zombonk">
+    
+
+    <!-- <div class="parallax-img-5" style="display:relative" id="rootrampage">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">ROOT
                 RAMPAGE</span>
         </div>
-    </div>
+    </div> -->
 
-    <div class="body-border">
+    <!-- Beginning of Root Rampage -->
+    <div class="body-border" id="rootrampage">
         <div class="body-inner-border">
-            <div class="body-container">
+            <div class="image-header" style="background-image: url(images/RootRampage/header.png);" onclick="toggleVisible(document.getElementById('root-rampage-body'))">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">ROOT RAMPAGE</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Developed enemy AI, making each enemy distinct</li>
+                                <li class="image-overlay-text">Developed an easily expandable attack system for enemies</li>
+                                <li class="image-overlay-text">Created a UI theme to unify design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container" id="root-rampage-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">
                     Root Rampage is a twin-stick, top-down, bullet hell shooter which was originally created for the
@@ -249,12 +320,7 @@
                         </ul>
                     </div>
                     <div class="text-column">
-                        <p>My contributions:</p>
-                        <ul>
-                            <li>Developed enemy AI, making each enemy distinct</li>
-                            <li>Developed an easily expandable attack system for enemies</li>
-                            <li>Created a UI theme to unify design</li>
-                        </ul>
+                        
                     </div>
                 </div>
 
@@ -285,17 +351,42 @@
             </div>
         </div>
     </div>
+    <!-- End of Root Rampage -->
 
-    <div class="parallax-img-2" style="display:relative" id="zombonk">
+    <!-- <div class="parallax-img-2" style="display:relative" id="zombonk">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded"
                 style="font-size:36px; margin-top: 150px;font-size:64px;">ZOMBONK</span>
         </div>
-    </div>
+    </div> -->
 
-    <div class="body-border">
+    <!-- Beginning of Zombonk -->
+    <div class="body-border" id="zombonk">
         <div class="body-inner-border">
-            <div class="body-container">
+            <div class="image-header" style="background-image: url(images/ZomBonk/header.png);" onclick="toggleVisible(document.getElementById('zombonk-body'))">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">ZOMBONK</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Developed a spawning system for enemies</li>
+                                <li class="image-overlay-text">Developed pickups to restore player battery charge</li>
+                                <li class="image-overlay-text">Created UI elements to display player resources</li>
+                                <li class="image-overlay-text">Composed music for the title screen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-container" id="zombonk-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">ZomBonk is a survival horror game created in 72 hours for the Ludum Dare 50 game jam,
                     where the theme was "Delay the Inevitable". In ZomBonk, players have a flashlight which runs out of
@@ -318,13 +409,7 @@
                         </ul>
                     </div>
                     <div class="text-column">
-                        <p>My contributions:</p>
-                        <ul>
-                            <li>Developed a spawning system for enemies</li>
-                            <li>Developed pickups to restore player battery charge</li>
-                            <li>Created UI elements to display player resources</li>
-                            <li>Composed music for the title screen</li>
-                        </ul>
+
                     </div>
                 </div>
 
@@ -355,17 +440,39 @@
             </div>
         </div>
     </div>
+    <!-- End of Zombonk -->
 
-    <div class="parallax-img-3" style="display:relative" id="quickswapcaverns">
+    <!-- <div class="parallax-img-3" style="display:relative" id="quickswapcaverns">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">QUICK
                 SWAP CAVERNS</span>
         </div>
-    </div>
+    </div> -->
 
-    <div class="body-border">
+    <!-- Beginning of Quick Swap Caverns -->
+    <div class="body-border" id="quickswapcaverns">
         <div class="body-inner-border">
-            <div class="body-container">
+            <div class="image-header" style="background-image: url(images/QuickSwapCaverns/header.png);" onclick="toggleVisible(document.getElementById('quick-swap-caverns-body'))">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">QUICK SWAP CAVERNS</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Designed levels</li>
+                                <li class="image-overlay-text">Scripted a variety of unique weapons</li>
+                                <li class="image-overlay-text">Implemented art</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container" id="quick-swap-caverns-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">Quick Swap Caverns is a hack and slash game made for the Global Game Jam 2021, which
                     had the theme "Lost & Found." Every time an enemy is killed, the player loses their weapon and gets
@@ -384,12 +491,7 @@
                         </ul>
                     </div>
                     <div class="text-column">
-                        <p>My contributions:</p>
-                        <ul>
-                            <li>Designed levels</li>
-                            <li>Scripted a variety of unique weapons</li>
-                            <li>Implemented art</li>
-                        </ul>
+
                     </div>
                 </div>
 
@@ -420,17 +522,41 @@
             </div>
         </div>
     </div>
+    <!-- End of Quick Swap Caverns -->
 
-    <div class="parallax-img-4" style="display:relative" id="redactedcatacombs">
+    <!-- <div class="parallax-img-4" style="display:relative" id="redactedcatacombs">
         <div style="white-space:nowrap; display: flex; justify-content: center; align-items: center;">
             <span class="black-textbox textbox-padded" style="font-size:36px; margin-top: 150px;font-size:64px;">THE
                 [REDACTED] CATACOMBS</span>
         </div>
-    </div>
+    </div> -->
 
+    <!-- Beginning of The Redacted Catacombs -->
     <div class="body-border">
         <div class="body-inner-border">
-            <div class="body-container">
+            <div class="image-header" style="background-image: url(images/RedactedCatacombs/header.png);" onclick="toggleVisible(document.getElementById('redacted-catacombs-body'))">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">THE [REDACTED] CATACOMBS</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Developed 3 different weapons</li>
+                                <li class="image-overlay-text">Added a momentum-based movement system</li>
+                                <li class="image-overlay-text">Developed an enemy spawning system</li>
+                                <li class="image-overlay-text">Designed three levels and a tutorial level</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container" id="redacted-catacombs-body" style="display:none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">The [REDACTED] Catacombs is a momentum-based first-person shooter game created for a
                     class project in 2022. In The [REDACTED] Catacombs, the player progresses through a tutorial and
@@ -451,13 +577,7 @@
                         </ul>
                     </div>
                     <div class="text-column">
-                        <p>My contributions:</p>
-                        <ul>
-                            <li>Developed 3 different weapons</li>
-                            <li>Added a momentum-based movement system</li>
-                            <li>Developed an enemy spawning system</li>
-                            <li>Designed three levels and a tutorial level</li>
-                        </ul>
+
                     </div>
                 </div>
 
@@ -486,19 +606,29 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+    </div>
+    <!-- End of The Redacted Catacombs -->
+    
+    <div class="body-border">
+        <div class="body-inner-border">
+            <div class="body-container">
                 <p style="font-size: 14px;">Built off of W3 School's <a
-                        href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=v">parallax
-                        template</a></p>
+                    href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=v">parallax
+                    template</a></p>
                 <p style="font-size: 14px;">Copyright 2023 Christopher Martens</p>
             </div>
         </div>
     </div>
-
+    
+    
     <div id="modal01" class="modal" onclick="this.style.display='none'">
         <!--<span class="" title="Close Modal Image"><i class="fa fa-remove"></i></span>-->
         <div class="modal-content" style="background-color: rgba(0,0,0,0.0);">
             <img id="img01" style="max-width:100%;height:auto">
-            <p id="caption" class="center" style="color: #f5edce; font-size: 24px;"></p>
+            <p id="caption" class="center" style="color: #ffffff; font-size: 24px;"></p>
         </div>
     </div>
 
@@ -508,6 +638,15 @@
             document.getElementById("modal01").style.display = "block";
             var captionText = document.getElementById("caption");
             captionText.innerHTML = element.alt;
+        }
+
+        function toggleVisible(x) {
+            // var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
     </script>
 </body>
