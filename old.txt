@@ -1,0 +1,82 @@
+    <!-- Beginning of The Redacted Catacombs -->
+    <div class="body-border" id="redactedcatacombs">
+        <div class="body-inner-border">
+            <div class="image-header container" style="background-image: url(images/RedactedCatacombs/header.png);" onclick="toggleVisible(document.getElementById('redacted-catacombs-body'), this)">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">THE [REDACTED] CATACOMBS</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Developed 3 different weapons</li>
+                                <li class="image-overlay-text">Added a momentum-based movement system</li>
+                                <li class="image-overlay-text">Developed an enemy spawning system</li>
+                                <li class="image-overlay-text">Designed three levels and a tutorial level</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
+            </div>
+            <div class="body-container container dropdown dropdown-body-container" id="redacted-catacombs-body" style="display:none;">
+                <!--<h1 class="center">ABOUT ME</h1>-->
+                <p class="center">The [REDACTED] Catacombs is a momentum-based first-person shooter game created for a
+                    class project in 2022. In The [REDACTED] Catacombs, the player progresses through a tutorial and
+                    three levels to delve deeper into the catacombs. Players use three different weapons, each with
+                    different properties, to both kill enemies and navigate levels. Players also are equipped with a
+                    dash, enabling a variety of movement options when combined with the guns. There is a hidden
+                    collectable in each level to give the players incentive to explore. Players can also restore health
+                    with health pickups spread throughout each level.</p>
+                <div class="row">
+                    <div class="text-column">
+                        <div style="height: 48px"></div>
+                        <ul>
+                            <li>Game Engine: Godot</li>
+                            <li>Year: 2022</li>
+                            <li>Team Size: 1</li>
+                            <li>Created For: Class Project</li>
+                            <li><a href="https://hadmatter00.itch.io/the-redacted-catacombs">Download Here</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-column">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/RedactedCatacombs/enemy.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="An enemy that shoots the player">
+                        <p class="center">An enemy that shoots the player</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/RedactedCatacombs/skull.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Hidden collectable item">
+                        <p class="center">Hidden collectable item</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/RedactedCatacombs/bacon.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Healing pickup">
+                        <p class="center">Healing pickup</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/RedactedCatacombs/goblin.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="An enemy that will explode">
+                        <p class="center">An enemy that will explode</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- End of The Redacted Catacombs -->

@@ -133,6 +133,14 @@
             border-radius: 1.5vh;
         }
 
+        .dropdown-body-container {
+            border-radius: 0 0 1.5vh 1.5vh !important;
+        }
+
+        .dropdown-header {
+            border-radius: 1.5vh 1.5vh 0 0 !important;
+        }
+
         .body-container {
             background-color: #ffffff;
             margin-left: auto;
@@ -140,6 +148,8 @@
             padding: 0.01em 16px;
             width: 95%;
         }
+
+
 
         .fullwidth-image {
             width: 100%;
@@ -172,6 +182,19 @@
             padding: 0;
             outline: 0;
             width: 800px;
+        }
+
+        .modal-image-container {
+            height: 80vh;
+        }
+
+        .modal-image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
         }
 
         .navbar-item {
@@ -273,6 +296,16 @@
             .copyright-info {
                 font-size: 12px;
             }
+
+            .modal-image-container {
+                height: auto;
+                width: 100vw;
+            }
+
+            .modal-image {
+                width: 80vw;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -284,10 +317,11 @@
     <div style="position:fixed;width:100%;z-index:1; top:0; background-color: #000000;" id="navbar-container">
         <div style="width:100%;overflow:hidden;display:inline-block;width:100%" id="navbar">
             <a href="#home" class="navbar-item">HOME</a>
+            <a href="#gourmetgauntlet" class="navbar-item" onclick="enableVisible(document.getElementById('gourmet-gauntlet-body'))">GOURMET GAUNTLET</a>
             <a href="#rootrampage" class="navbar-item" onclick="enableVisible(document.getElementById('root-rampage-body'))">ROOT RAMPAGE</a>
             <a href="#zombonk" class="navbar-item" onclick="enableVisible(document.getElementById('zombonk-body'))">ZOMBONK</a>
             <a href="#quickswapcaverns" class="navbar-item" onclick="enableVisible(document.getElementById('quick-swap-caverns-body'))">QUICK SWAP CAVERNS</a>
-            <a href="#redactedcatacombs" class="navbar-item" onclick="enableVisible(document.getElementById('redacted-catacombs-body'))">THE [REDACTED] CATACOMBS</a>
+            <!-- <a href="#redactedcatacombs" class="navbar-item" onclick="enableVisible(document.getElementById('redacted-catacombs-body'))">THE [REDACTED] CATACOMBS</a> -->
 
             <a href="files/Christopher Martens Resume.pdf" target="_blank" class="navbar-item"
                 style="float:right!important">DOWNLOAD MY RESUME</a>
@@ -307,11 +341,9 @@
                 <h1 class="center">CHRISTOPHER MARTENS</h1>
                 <h2 class="center">GAMEPLAY PROGRAMMER</h2>
                 <!-- <h1 class="center">ABOUT ME</h1> -->
-                <p class="center bio-text">Hi! I'm Christopher Martens, a Digital Simulation and Gaming Engineering Technology
-                    major at Shawnee State University. I am additionally pursuing a math minor. I currently work as a
-                    math tutor at Shawnee State University's Dayton duMeleau Math Center. I expect to graduate in May of
-                    2024, and I am looking for a job. Below you can find some projects I've worked on, and you can 
-                    download a copy of my resume from the upper right corner of the page.</p>
+                <p class="center bio-text">Hi! I'm Christopher Martens, a Gameplay Programmer with a Digital Simulation and Gaming Engineering Technology
+                    major with a mathematics minor from Shawnee State University. I am currently looking for a job. Below you can find some projects 
+                    I've worked on, and you can download a copy of my resume from the upper right corner of the page.</p>
             </div>
         </div>
     </div>
@@ -325,10 +357,93 @@
         </div>
     </div> -->
 
+    <!-- Beginning of Gourmet Gauntlet -->
+    <div class="body-border" id="gourmetgauntlet">
+        <div class="body-inner-border">
+            <div class="image-header container" style="background-image: url(images/GourmetGauntlet/header.png);" onclick="toggleVisible(document.getElementById('gourmet-gauntlet-body'), this)">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">GOURMET GAUNTLET</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Developed a complex and expandable proceudral generation system</li>
+                                <li class="image-overlay-text">Developed a multi-phase boss fight</li>
+                                <li class="image-overlay-text">Created complex enemies and an powerful enemy attack system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
+            </div>
+            <div class="body-container container dropdown dropdown-body-container" id="gourmet-gauntlet-body" style="display: none;">
+                <!--<h1 class="center">ABOUT ME</h1>-->
+                <p class="center">
+                    Gourmet Gauntlet is a twin-stick, top-down, bullet hell roguelike which was created for my senior project. We spent a
+                    total of two semesters working on it. We were able to have a playable demo by Shawnee Game Conference in Fall of 2024,
+                    allowing us to get valuable feedback and improve the game. The player progresses through a procedurally generated city,
+                    collecting unique items that make them stronger and fighting more challenging rooms of enemies until eventually they
+                    fight a boss. Each of the four enemies has a distinct attack pattern, and tries to avoid the player's attacks. Items the
+                    player can pick up give a variety of bonuses, from simply increasing the player's abilities to making nearby enemies
+                    take damage if they injure the player. The procedural generation system is complex, and can very easily be expanded to
+                    add new elements to the level or to create new levels.
+                </p>
+                <div class="row">
+                    <div class="text-column">
+                        <div style="height: 48px"></div>
+                        <ul>
+                            <li>Game Engine: Godot</li>
+                            <li>Years: 2023-2024</li>
+                            <li>Team Size: 3</li>
+                            <li>Created For: Senior Project</li>
+                        </ul>
+                    </div>
+                    <div class="text-column">
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/GourmetGauntlet/level_start.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Start of a generated level">
+                        <p class="center">Start of a generated level</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/GourmetGauntlet/combat.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Player fighting enemies">
+                        <p class="center">Player fighting enemies</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/GourmetGauntlet/item_selection.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Player choosing between items">
+                        <p class="center">Player choosing between items</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/GourmetGauntlet/boss.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Final boss">
+                        <p class="center">Final boss</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Gourmet Gauntlet -->
+
+
     <!-- Beginning of Root Rampage -->
     <div class="body-border" id="rootrampage">
         <div class="body-inner-border">
-            <div class="image-header container" style="background-image: url(images/RootRampage/header.png);" onclick="toggleVisible(document.getElementById('root-rampage-body'))">
+            <div class="image-header container" style="background-image: url(images/RootRampage/header.png);" onclick="toggleVisible(document.getElementById('root-rampage-body'), this)">
                 <div class="row">
                     <div class="text-column header-overlay-column">
                         <div class="image-overlay-color">
@@ -351,7 +466,7 @@
                 <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
                 <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
-            <div class="body-container container dropdown" id="root-rampage-body" style="display: none;">
+            <div class="body-container container dropdown dropdown-body-container" id="root-rampage-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">
                     Root Rampage is a twin-stick, top-down, bullet hell shooter which was originally created for the
@@ -418,7 +533,7 @@
     <!-- Beginning of Zombonk -->
     <div class="body-border" id="zombonk">
         <div class="body-inner-border">
-            <div class="image-header container" style="background-image: url(images/ZomBonk/header.png);" onclick="toggleVisible(document.getElementById('zombonk-body'))">
+            <div class="image-header container" style="background-image: url(images/ZomBonk/header.png);" onclick="toggleVisible(document.getElementById('zombonk-body'), this)">
                 <div class="row">
                     <div class="text-column header-overlay-column">
                         <div class="image-overlay-color">
@@ -443,7 +558,7 @@
                 <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
 
-            <div class="body-container container dropdown" id="zombonk-body" style="display: none;">
+            <div class="body-container container dropdown dropdown-body-container" id="zombonk-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">ZomBonk is a survival horror game created in 72 hours for the Ludum Dare 50 game jam,
                     where the theme was "Delay the Inevitable". In ZomBonk, players have a flashlight which runs out of
@@ -509,7 +624,7 @@
     <!-- Beginning of Quick Swap Caverns -->
     <div class="body-border" id="quickswapcaverns">
         <div class="body-inner-border">
-            <div class="image-header container" style="background-image: url(images/QuickSwapCaverns/header.png);" onclick="toggleVisible(document.getElementById('quick-swap-caverns-body'))">
+            <div class="image-header container" style="background-image: url(images/QuickSwapCaverns/header.png);" onclick="toggleVisible(document.getElementById('quick-swap-caverns-body'), this)">
                 <div class="row">
                     <div class="text-column header-overlay-column">
                         <div class="image-overlay-color">
@@ -531,7 +646,7 @@
                 <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
                 <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
             </div>
-            <div class="body-container container dropdown" id="quick-swap-caverns-body" style="display: none;">
+            <div class="body-container container dropdown dropdown-body-container" id="quick-swap-caverns-body" style="display: none;">
                 <!--<h1 class="center">ABOUT ME</h1>-->
                 <p class="center">Quick Swap Caverns is a hack and slash game made for the Global Game Jam 2021, which
                     had the theme "Lost & Found." Every time an enemy is killed, the player loses their weapon and gets
@@ -590,96 +705,12 @@
         </div>
     </div> -->
 
-    <!-- Beginning of The Redacted Catacombs -->
-    <div class="body-border" id="redactedcatacombs">
-        <div class="body-inner-border">
-            <div class="image-header container" style="background-image: url(images/RedactedCatacombs/header.png);" onclick="toggleVisible(document.getElementById('redacted-catacombs-body'))">
-                <div class="row">
-                    <div class="text-column header-overlay-column">
-                        <div class="image-overlay-color">
-                            <h1 class="image-overlay-text header-overlay-text">THE [REDACTED] CATACOMBS</h1>
-                        </div>
-                        
-                    </div>
-                    <div class="text-column flex-center-contents">
-                        <div class="image-overlay-box">
-                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
-                            <p class="image-overlay-text">My contributions:</p>
-                            <ul>
-                                <li class="image-overlay-text">Developed 3 different weapons</li>
-                                <li class="image-overlay-text">Added a momentum-based movement system</li>
-                                <li class="image-overlay-text">Developed an enemy spawning system</li>
-                                <li class="image-overlay-text">Designed three levels and a tutorial level</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
-                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
-            </div>
-            <div class="body-container container dropdown" id="redacted-catacombs-body" style="display:none;">
-                <!--<h1 class="center">ABOUT ME</h1>-->
-                <p class="center">The [REDACTED] Catacombs is a momentum-based first-person shooter game created for a
-                    class project in 2022. In The [REDACTED] Catacombs, the player progresses through a tutorial and
-                    three levels to delve deeper into the catacombs. Players use three different weapons, each with
-                    different properties, to both kill enemies and navigate levels. Players also are equipped with a
-                    dash, enabling a variety of movement options when combined with the guns. There is a hidden
-                    collectable in each level to give the players incentive to explore. Players can also restore health
-                    with health pickups spread throughout each level.</p>
-                <div class="row">
-                    <div class="text-column">
-                        <div style="height: 48px"></div>
-                        <ul>
-                            <li>Game Engine: Godot</li>
-                            <li>Year: 2022</li>
-                            <li>Team Size: 1</li>
-                            <li>Created For: Class Project</li>
-                            <li><a href="https://hadmatter00.itch.io/the-redacted-catacombs">Download Here</a></li>
-                        </ul>
-                    </div>
-                    <div class="text-column">
 
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="img-column">
-                        <img src="images/RedactedCatacombs/enemy.png" class="fullwidth-image" onclick="onClick(this)"
-                            alt="An enemy that shoots the player">
-                        <p class="center">An enemy that shoots the player</p>
-                    </div>
-                    <div class="img-column">
-                        <img src="images/RedactedCatacombs/skull.png" class="fullwidth-image" onclick="onClick(this)"
-                            alt="Hidden collectable item">
-                        <p class="center">Hidden collectable item</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="img-column">
-                        <img src="images/RedactedCatacombs/bacon.png" class="fullwidth-image" onclick="onClick(this)"
-                            alt="Healing pickup">
-                        <p class="center">Healing pickup</p>
-                    </div>
-                    <div class="img-column">
-                        <img src="images/RedactedCatacombs/goblin.png" class="fullwidth-image" onclick="onClick(this)"
-                            alt="An enemy that will explode">
-                        <p class="center">An enemy that will explode</p>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-    </div>
-    <!-- End of The Redacted Catacombs -->
     
     <div class="body-border">
         <div class="body-inner-border">
             <div class="body-container container">
-                <p class="copyright-info">Built off of W3 School's <a
-                    href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=v">parallax
-                    template</a></p>
-                <p class="copyright-info">Copyright 2023 Christopher Martens</p>
+                <p class="copyright-info">Copyright 2024 Christopher Martens</p>
             </div>
         </div>
     </div>
@@ -688,7 +719,9 @@
     <div id="modal01" class="modal" onclick="this.style.display='none'">
         <!--<span class="" title="Close Modal Image"><i class="fa fa-remove"></i></span>-->
         <div class="modal-content" style="background-color: rgba(0,0,0,0.0);">
-            <img id="img01" style="max-width:100%;height:auto">
+            <div class="modal-image-container">
+                <img id="img01" class="modal-image">
+            </div>
             <p id="caption" class="center" style="color: #ffffff; font-size: 24px;"></p>
         </div>
     </div>
@@ -701,7 +734,7 @@
             captionText.innerHTML = element.alt;
         }
 
-        function toggleVisible(x) {
+        function toggleVisible(x, y) {
             // var x = document.getElementById("myDIV");
             if (x.style.display === "none") {
                 // var elements = document.getElementsByClassName("dropdown");
@@ -710,9 +743,10 @@
                 // {
                 //     elements[i].style.display = "none";
                 // }
-
+                y.classList.add("dropdown-header");
                 x.style.display = "block";
             } else {
+                y.classList.remove("dropdown-header");
                 x.style.display = "none";
             }
         }
