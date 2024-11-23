@@ -80,3 +80,88 @@
         </div>
     </div>
     <!-- End of The Redacted Catacombs -->
+
+
+        <!-- Beginning of Zombonk -->
+    <div class="body-border" id="zombonk">
+        <div class="body-inner-border">
+            <div class="image-header container" style="background-image: url(images/ZomBonk/header.png);" onclick="toggleVisible(document.getElementById('zombonk-body'), this)">
+                <div class="row">
+                    <div class="text-column header-overlay-column">
+                        <div class="image-overlay-color">
+                            <h1 class="image-overlay-text header-overlay-text">ZOMBONK</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="text-column flex-center-contents">
+                        <div class="image-overlay-box">
+                        <!-- <div style="background-color:rgba(0, 0, 0, 0.7); padding: 0.01em 16px; margin: 0 auto; top: 50%; transform: translate(0, 25%);"> -->
+                            <p class="image-overlay-text">My contributions:</p>
+                            <ul>
+                                <li class="image-overlay-text">Developed a spawning system for enemies</li>
+                                <li class="image-overlay-text">Developed pickups to restore player battery charge</li>
+                                <li class="image-overlay-text">Created UI elements to display player resources</li>
+                                <li class="image-overlay-text">Composed music for the title screen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangle-down-outline" style="right: 10px; bottom: 10px"></div>
+                <div class="triangle-down" style="right: 14px; bottom: 15px"></div>
+            </div>
+
+            <div class="body-container container dropdown dropdown-body-container" id="zombonk-body" style="display: none;">
+                <!--<h1 class="center">ABOUT ME</h1>-->
+                <p class="center">ZomBonk is a survival horror game created in 72 hours for the Ludum Dare 50 game jam,
+                    where the theme was "Delay the Inevitable". In ZomBonk, players have a flashlight which runs out of
+                    power over time, diminishing their visibility. They can restore power to the flashlight by picking
+                    up batteries which are placed randomly throughout the map. The player also has a hammer, which they
+                    can use to kill zombies as the zombies rise out of graves or to stun fully spawned zombies. If the
+                    player kills a spawning zombie, they will receive a battery, allowing them to theoretically survive
+                    infinitely. The player can take a few hits from the zombies before dying, and their health will
+                    gradually regenerate over time.</p>
+                <div class="row">
+                    <div class="text-column">
+                        <div style="height: 48px"></div>
+                        <ul>
+                            <li>Game Engine: Godot</li>
+                            <li>Year: 2022</li>
+                            <li>Team Size: 4</li>
+                            <li>Created For: Ludum Dare 50</li>
+                            <li><a href="https://hadmatter00.itch.io/zombonk">Download Here</a></li>
+                            <li><a href="https://github.com/KingofSkulls/zombonk">See the Github Here</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-column">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/ZomBonk/zombie_spawning.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Zombie spawning from a gravestone">
+                        <p class="center">Zombie spawning from a gravestone</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/ZomBonk/battery.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Battery pickup">
+                        <p class="center">Battery pickup</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="img-column">
+                        <img src="images/ZomBonk/title_screen.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Title screen">
+                        <p class="center">Title screen</p>
+                    </div>
+                    <div class="img-column">
+                        <img src="images/ZomBonk/score_screen.png" class="fullwidth-image" onclick="onClick(this)"
+                            alt="Score screen">
+                        <p class="center">Score screen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Zombonk -->
